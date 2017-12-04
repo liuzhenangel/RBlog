@@ -1,0 +1,30 @@
+# encoding: utf-8
+## backup gem example
+## Howto:
+## $ gem install backup
+## $ backup generate:model --trigger RBlog --archives --storages='local' --compressor='gzip'
+## $ cp config/backup.rb.example ~/Backup/models/RBlog.rb
+## $ backup perform --trigger RBlog
+
+Model.new(:RBlog, 'Description for RBlog') do
+
+  database PostgreSQL do |db|
+    db.name               = "RBlog_production"
+    db.username           = "postgres"
+    db.password           = "postgres"
+    db.host               = "localhost"
+    db.port               = 5432
+  end
+
+  archive :rails_config do |archive|
+    archive.add "/data/www/RBlog/shared/config/application.yml"
+    archive.add "/data/www/RBlog/shared/config/database.yml"
+  end
+
+  store_with Local do |local|
+    local.path       = "/data/www/backups/"
+    local.keep       = 5
+  end
+
+  compress_with Gzip
+end
