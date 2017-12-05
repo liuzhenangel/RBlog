@@ -19,6 +19,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag "favicon.ico"
   body
-    main
-      .container
-        == yield
+    == render 'layouts/navigation'
+    == render partial: 'layouts/header', locals: {title: @title, subtitle: @subtitle}
+    .container
+      .row
+        .col-lg-8.col-md-10.mx-auto
+          == yield
+    == render 'layouts/footer'

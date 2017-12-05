@@ -1,11 +1,14 @@
-.container.text-center
-  h1 Hello World
+- @articles.each do |article|
+  .post-preview
+    = link_to article_path(article) do
+      h2.post-title #{article.title}
+      h3.post-subtitle #{article.subtitle}
+      p.post-meta
+        |Posted by
+        '
+        = link_to 'Rina', article_path(article)
+        '
+        |on #{format_date article.created_at}
   hr
-  h3 You are roading on Rails...
-  br
-  br
-  br
-  br
-  p.text-muted From rails-template of 80percent!!
-
-  = link_to 'About Page', page_path('about')
+.clearfix
+  = link_to 'Older Posts →', articles_path, class: 'btn btn-primary float-right'

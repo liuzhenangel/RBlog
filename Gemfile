@@ -29,7 +29,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
 gem 'figaro'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
 gem 'simple_form', '~> 3.5.0'
 gem 'font-awesome-sass'
 gem 'slim-rails'
@@ -55,6 +54,8 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'byebug', platform: :mri
+  gem 'pry'
 end
 
 group :test do
