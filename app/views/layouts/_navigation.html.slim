@@ -1,7 +1,7 @@
 nav.navbar.navbar-expand-lg.navbar-light.fixed-top#mainNav
   .container
     = link_to "Rina's Blog", root_path, class: 'navbar-brand'
-    button.navbar-toggler.navbar-toggler-right type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+    button.navbar-toggler.navbar-toggler-right type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation"
       |Menu
       i.fa.fa-bars
     .collapse.navbar-collapse#navbarResponsive
@@ -11,7 +11,7 @@ nav.navbar.navbar-expand-lg.navbar-light.fixed-top#mainNav
         li.nav-item
           = link_to '所有', articles_path, class: 'nav-link'
         li.nav-item
-          = link_to '相册', '#', class: 'nav-link'
+          = link_to '相册', photos_path, class: 'nav-link'
         li.nav-item
           = link_to '关于', about_path, class: 'nav-link'
         li.nav-item

@@ -4,10 +4,10 @@ header.masthead
     .row
       .col-lg-8.col-md-10.mx-auto
         .site-heading
-          h1 = @article.title
-          span.subheading = @article.subtitle
+          h1 = @photo.title
+          span.subheading = @photo.subtitle
 .container
   .row
     .col-lg-8.col-md-10.mx-auto
       .content-markdown
-        = @article.content.html_safe
+        = @photo.content.html_safe

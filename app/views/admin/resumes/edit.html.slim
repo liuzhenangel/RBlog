@@ -1,0 +1,11 @@
+.row
+  .offset-md-2.col-md-8
+    = simple_form_for [:admin, @resume] do |f|
+      = f.error_notification
+      = f.input :title
+      = f.input :subtitle
+      = f.text_area :content, id: 'editor_content', class: 'simditor', autofocus: true
+      = f.submit '提交', class: 'btn btn-primary'
+
+javascript:
+  new Simditor({textarea: $('#editor_content')});

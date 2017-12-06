@@ -1,0 +1,2 @@
+class Resume < Base
+end

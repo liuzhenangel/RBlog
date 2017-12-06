@@ -1,14 +1,26 @@
-- @articles.each do |article|
-  .post-preview
-    = link_to article_path(article) do
-      h2.post-title #{article.title}
-      h3.post-subtitle #{article.subtitle}
-      p.post-meta
-        |Posted by
-        '
-        = link_to 'Rina', article_path(article)
-        '
-        |on #{format_date article.created_at}
-  hr
-.clearfix
-  = link_to 'Older Posts →', articles_path, class: 'btn btn-primary float-right'
+header.masthead
+  .overlay
+  .container
+    .row
+      .col-lg-8.col-md-10.mx-auto
+        .site-heading
+          h1 Rina Liu
+          span.subheading 一名女程序媛
+.container
+  .row
+    .col-lg-8.col-md-10.mx-auto
+      - @articles.each do |article|
+        .post-preview
+          = link_to article_path(article) do
+            h2.post-title #{article.title}
+            h3.post-subtitle #{article.subtitle}
+            p.post-meta
+              |Posted by
+              '
+              = link_to 'Rina', article_path(article)
+              '
+              |on #{format_date article.created_at}
+        hr
+      - unless @articles.blank?
+        .clearfix
+          = link_to 'Older Posts →', articles_path, class: 'btn btn-primary float-right'

@@ -10,4 +10,7 @@
       = link_to '取消', admin_articles_path
 
 javascript:
-  new Simditor({textarea: $('#editor_content')});
+  new Simditor({
+    textarea: $('#editor_content'),
+    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale', 'color', '|', 'ol', 'ul', '|', 'blockquote', 'code', 'table', 'link', 'image', 'hr', 'indent', 'outdent', 'alignment']
+  });

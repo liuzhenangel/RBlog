@@ -19,6 +19,17 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag "favicon.ico"
   body
-    == render 'layouts/navigation'
-    == yield
+    == render 'layouts/messages'
+    .container
+      .row
+        .col-lg-8.col-md-10.mx-auto
+          h1.text-center 登录
+          = form_for(:session, url: sessions_path, class: 'form-horizontal') do |f|
+            .form-group
+              label.col-form-label 用户名
+              = f.text_field :username, class: 'form-control', placeholder: '用户名'
+            .form-group
+              label.col-form-label 密码
+              = f.password_field :password, class: 'form-control', placeholder: '密码'
+            = f.submit '登录', class: 'btn btn-large btn-primary'
     == render 'layouts/footer'

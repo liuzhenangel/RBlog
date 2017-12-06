@@ -12,12 +12,20 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top#mainNav
         = link_to admin_articles_path, class: 'nav-link' do
           i.fa.fa-fw.fa-table
           span.nav-link-text 文章
+      li class="nav-item #{active_for(admin_photos_path, url_for)}" data-toggle="tooltip" data-placement="right" title="" data-original-title="相册"
+        = link_to admin_photos_path, class: 'nav-link' do
+          i.fa.fa-fw.fa-address-book-o
+          span.nav-link-text 相册
+      li class="nav-item #{active_for(edit_admin_resume_path, url_for)}" data-toggle="tooltip" data-placement="right" title="" data-original-title="简历"
+        = link_to edit_admin_resume_path, class: 'nav-link' do
+          i.fa.fa-fw.fa-file-text-o
+          span.nav-link-text 简历
     ul.navbar-nav.sidenav-toggler
       li.nav-item
         a.nav-link.text-center#sidenavToggler
           i.fa.fa-fw.fa-angle-left
     ul.navbar-nav.ml-auto
       li.nav-item
-        = link_to '#', class: 'nav-link', 'data-toggle': "modal", 'data-target': '#exampleModal' do
+        = link_to signout_path, class: 'nav-link', 'data-toggle': "modal", 'data-target': '#exampleModal' do
           i.fa.fa-fw.fa-sign-out
           |Logout

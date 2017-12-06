@@ -1,0 +1,25 @@
+- content_for(:title) do
+  | 相册列表
+
+p = link_to '新建', new_admin_photo_path, class: 'btn btn-info'
+table.table
+  thead
+    tr
+      th 相册名称
+      th 相册描述
+      th 创建时间
+      th 更新时间
+      th 操作
+  tbody
+    - @photos.each do |photo|
+      tr
+        td = photo.title
+        td = photo.subtitle
+        td = format_date photo.created_at
+        td = format_date photo.updated_at
+        td
+          = link_to '更新', edit_admin_photo_path(photo), class: 'btn btn-info btn-sm'
+          '
+          = link_to '删除', admin_photo_path(photo), method: 'DELETE', data: { confirm: "确定删除#{photo.title}这个相册?" }, class: 'btn btn-danger btn-sm'
+
+    = paginate @photos

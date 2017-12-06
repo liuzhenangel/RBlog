@@ -1,17 +1,12 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.order(created_at: 'DESC').limit(10)
-    @title = 'Rina.Liu'
-    @subtitle = '一名女程序媛'
+    @articles = Article.all.order(created_at: 'DESC').limit(10)
   end
 
   def about
-    @title = 'About Me'
-    @subtitle = '一名女程序媛'
+    @resume = Resume.first
   end
 
   def timeline
-    @title = '时间线'
-    @subtitle = '工作经历'
   end
 end

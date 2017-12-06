@@ -1,0 +1,23 @@
+.row
+  .offset-md-2.col-md-8
+    = simple_form_for [:admin, @photo] do |f|
+      = f.error_notification
+      = f.input :title
+      = f.input :subtitle
+      = f.text_area :content, id: 'editor_content', class: 'simditor', autofocus: true
+      = f.submit '提交', class: 'btn btn-primary'
+      '
+      = link_to '取消', admin_photos_path
+
+javascript:
+  new Simditor({
+		textarea: $('#editor_content'),
+    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale', 'color', '|', 'ol', 'ul', '|', 'blockquote', 'code', 'table', 'link', 'image', 'hr', 'indent', 'outdent', 'alignment'],
+		upload: {
+			url: '/admin/upload', //文件上传的接口地址
+			params:  null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+			fileKey: 'file', //服务器端获取文件数据的参数名
+			connectionCount: 3,
+			leaveConfirm: '正在上传文件'
+		}
+	});

@@ -12,10 +12,17 @@ Rails.application.routes.draw do
 
   get 'about', to: 'home#about'
   get 'timeline', to: 'home#timeline'
-  resources :articles
+  get 'signout', to: 'sessions#destroy'
+
+  resources :sessions, only:[:new, :create]
+  resources :articles, only: [:index, :show]
+  resources :photos, only: [:index, :show]
 
   namespace :admin do
     root 'dashboard#index', as: 'root'
+		post '/upload', to: 'photos#upload'
     resources :articles
+    resources :photos
+    resource :resume, only: [:edit, :update]
   end
 end
