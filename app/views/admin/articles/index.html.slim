@@ -22,4 +22,4 @@ table.table
           '
           = link_to '删除', admin_article_path(article), method: 'DELETE', data: { confirm: "确定删除#{article.title}这篇文章?" }, class: 'btn btn-danger btn-sm'
 
-    = paginate @articles
+= paginate @articles

@@ -22,4 +22,4 @@ table.table
           '
           = link_to '删除', admin_photo_path(photo), method: 'DELETE', data: { confirm: "确定删除#{photo.title}这个相册?" }, class: 'btn btn-danger btn-sm'
 
-    = paginate @photos
+= paginate @photos
