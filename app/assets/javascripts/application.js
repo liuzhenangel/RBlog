@@ -3,5 +3,6 @@
 //= require turbolinks
 //= require bootstrap.bundle.min
 //= require cable
-//= require clean-blog
-//= require timeline/main
+//= require startbootstrap-clean-blog
+//= require timeline-modernizr
+//= require timeline-main

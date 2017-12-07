@@ -5,25 +5,74 @@ header.masthead
       .col-lg-8.col-md-10.mx-auto
         .site-heading
           h1 时间线
-          span.subheading 工作经历
-.container
-  .row
-    .col-lg-8.col-md-10.mx-auto
-      .cd-timeline-wrap
-        section.cd-container#cd-timeline
-          .cd-timeline-block
-            .cd-timeline-img.cd-picture
-              = image_tag 'https://codyhouse.co/demo/vertical-timeline/img/cd-icon-location.svg'
-            .cd-timeline-content
-              h2 Title of section 1
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
-              a.cd-read-more href='#' Read more
-              span.cd-date Jan 14
-          .cd-timeline-block
-            .cd-timeline-img.cd-picture
-              = image_tag 'https://codyhouse.co/demo/vertical-timeline/img/cd-icon-location.svg'
-            .cd-timeline-content
-              h2 Title of section 1
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
-              a.cd-read-more href='#' Read more
-              span.cd-date Jan 14
+          span.subheading 成长经历
+section.cd-container#cd-timeline
+  .cd-timeline-block
+    .cd-timeline-img.cd-picture
+    .cd-timeline-content
+      h2 大疆 - Web前端研发工程师
+      p 独立负责无人机培训考试系统开发。
+      = link_to 'Read more', 'https://www.uastc.com/', target: '_blank', class: 'cd-read-more'
+      span.cd-date 现在
+  .cd-timeline-block
+    .cd-timeline-img.cd-location
+    .cd-timeline-content
+      h2 RubyChina - React 项目
+      p react-ruby-china 项目是一个利用 react, react-dom, react-redux, react-router, redux, es6 和 redux-thunk 实现的 RubyChina 社区克隆项目, 主要目的是为了熟悉 react.js; 这是一个前后端分离项目, 前端主要是 react, react-dom, react-redux, react-router, redux, es6, redux-thunk, css 框架使用了 bootstrap. 后端利用 ruby-china 开放的 api. 支持响应式布局. 目前已有 290+ star 数.
+      = link_to 'Read more', 'https://github.com/liuzhenangel/v2ex_frontend', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201610
+  .cd-timeline-block
+    .cd-timeline-img.cd-movie
+    .cd-timeline-content
+      h2 V2EX - vue.js 项目
+      p V2EX 是一个利用 vue.js 和 v2ex api 实现的 V2EX 社区克隆项目, 主要目的是为了熟悉 vue.js; 这是一个前后端分离项目, 前端主要是 vue.js 和 vue-router, css 框架使用了 uikit. 后端利用 v2ex 开放的 api. 支持响应式布局. 目前已有 330+ star 数.
+      = link_to 'Read more', 'https://github.com/liuzhenangel/v2ex_frontend', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201610
+  .cd-timeline-block
+    .cd-timeline-img.cd-picture
+    .cd-timeline-content
+      h2 君投天地 Co.Fund(自由职业)
+      p 纽约的一个股权众筹的创业项目, 我作为主程负责开发了相关功能: 线上融资流程, 用户充值取现系统, 授权认证等; 前端使用了 AngularJS1.x, Foundation5 和 font-awesome, underscore, SASS 技术栈; 后端使用了 Rails; 收获了很多: https 布署, 全站 CDN 加速, 前后端分离的实践.
+      = link_to 'Read more', 'https://co.fund', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201606
+  .cd-timeline-block
+    .cd-timeline-img.cd-location
+    .cd-timeline-content
+      h2 优融网络科技-Rails 高级工程师
+      p UBOSS 商城, 是一个专注本地化的电商系统; 主要负责 后端逻辑 及 前端UI 工作; 主要开发功能: 运费模板, 单个或多个商品运费计算, 运费满减, 订单评价, 退款/退货售后, 团购管理(店铺管理/验证管理/前台用户&商家模块/收益管理/评价管理/商品管理) 等等.
+      = link_to 'Read more', 'http://uboss.me/', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201509
+  .cd-timeline-block
+    .cd-timeline-img.cd-movie
+    .cd-timeline-content
+      h2 GODA(自由职业)
+      p GODA 是一站式高端人才招聘的创业项目, 我负责了前期所有前后端开发及部署上线工作; 核心功能: 简历拍卖, 面试邀请, 后台审核, 接受/拒绝邀请, 邮件通知等; 收获: mina + unicorn + nignx 环境部署, RJS 前端交互.
+      = link_to 'Read more', 'http://51goda.com/', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201506
+  .cd-timeline-block
+    .cd-timeline-img.cd-picture
+    .cd-timeline-content
+      h2 ECS - 一个发现，创造与分享城市一切美好事物的公益平台
+      p 这是为朋友做的一个公益平台项目, 主要用于发布活动信息, 核心功能: 搜索, 点赞, 分享, 评论, 后台管理等功能; 前端使用了 Bootstrap, jquery, SASS, Coffee 技术栈; 后端使用了 Rails.
+      = link_to 'Read more', 'http://ecssz.com/', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201504
+  .cd-timeline-block
+    .cd-timeline-img.cd-location
+    .cd-timeline-content
+      h2 首个个人博客
+      p 这是我做的第一个技术博客, 具备博客管理, 点赞, 评论, 相册, 音乐盒等现代网站所有特性; 前端使用了 Bootstrap, jquery, SASS, Coffee 技术栈; 后端使用了 Rails.
+      = link_to 'Read more', 'https://github.com/liuzhenangel/Rina_Blog', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201503
+  .cd-timeline-block
+    .cd-timeline-img.cd-movie
+    .cd-timeline-content
+      h2 深信服科技-测试开发工程师
+      p 作为测试开发工程师, 与团队一起负责测试资源管理平台的开发及维护; 负责自动化框架的开发与维护; 完成一些内部工具的开发如: 企业内部搜索引擎的技术选型与开发.
+      = link_to 'Read more', 'http://www.sangfor.com.cn/', target: '_blank', class: 'cd-read-more'
+      span.cd-date 201303
+  .cd-timeline-block
+    .cd-timeline-img.cd-picture
+    .cd-timeline-content
+      h2 本科毕业
+      p 毕业于中南林业科技大学(本科)
+      span.cd-date 201309
