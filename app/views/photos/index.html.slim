@@ -4,8 +4,37 @@ header.masthead
     .row
       .col-lg-8.col-md-10.mx-auto
         .site-heading
-          h1 相册
-          span.subheading 记录生活，记录美
-.container
-  .row
-    .col-lg-8.col-md-10.mx-auto
+.flipbook-viewport
+  .container
+    .flipbook
+      div class="page" style="background-image:url(#{asset_path '1.jpg'})"
+      div class="double" style="background-image:url(#{asset_path '3.jpg'})"
+      div class="double" style="background-image:url(#{asset_path '4.jpg'})"
+      div class="double" style="background-image:url(#{asset_path '5.jpg'})"
+      div class="double" style="background-image:url(#{asset_path '6.jpg'})"
+      - Image.all.each do |image|
+        div class="double" style="background-image:url(#{image.img.url})"
+      div class="page" style="background-image:url(#{asset_path '7.jpg'})"
+.div style="margin: 200px 0"
+javascript:
+  function loadApp() {
+    var flipbook = $('.flipbook');
+    if (flipbook.width()==0 || flipbook.height()==0) {
+      setTimeout(loadApp, 10);
+      return;
+    }
+    $('.flipbook .double').scissor();
+
+    $('.flipbook').turn({
+        elevation: 50,
+        gradients: true,
+        autoCenter: true
+    });
+  }
+  yepnope({
+    test : Modernizr.csstransforms,
+    yep: ['assets/turn.min.js'],
+    nope: ['assets/turn.html4.min.js'],
+    both: ['assets/turn-scissor.min.js', 'assets/turn-double-page.css'],
+    complete: loadApp
+  });
