@@ -1,13 +1,21 @@
 $(document).on 'turbolinks:load', ->
-  $('.first').on 'click', (event)->
+  $('.album-home').on 'click', (event)->
+    #obj = $('.magazine').find('img')
+    #$.each obj, (index, element) ->
+      #console.log(index)
+      #console.log(element)
+      #$(element).attr('src', event.target.src)
+      #return
     $('.album-samples').show()
+    $('body').addClass('overflow-hidden')
     $('.container.album-wrap').hide()
     $('header.masthead').hide()
+    $('.magazine').turn('page', 1)
     $('.magazine').turn('page', 2)
 
   $('a.icon.quit').on 'click', (event)->
-    console.log('xxxx')
     event.preventDefault()
+    $('body').removeClass('overflow-hidden')
     $('.album-samples').hide()
     $('.container.album-wrap').show()
     $('header.masthead').show()
