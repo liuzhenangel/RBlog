@@ -1,0 +1,9 @@
+//= require jquery
+//= require turbolinks
+//= require cable
+//= require startbootstrap-clean-blog
+//= require turn-jquery.min
+//= require jquery-ui-1.8.20.custom.min
+//= require turn-modernizr.min
+//= require turn-hash
+//= require open-turn

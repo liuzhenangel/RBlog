@@ -1,0 +1,54 @@
+@import "bootstrap";
+@import "startbootstrap-clean-blog";
+@import "animate";
+
+body.photo-wrapper {
+  background-image: image-url("home-bg.jpg");
+  overflow: scroll;
+
+  header.masthead {
+    margin-top: 200px;
+  }
+
+  .container.album-wrap {
+    .col-lg-4.col-md-2.mx-auto:hover {
+      z-index:2;
+      cursor:none;
+      background-color:white;
+      -webkit-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+      -moz-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+      -ms-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+      -o-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+      transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .bar-wrap {
+    .quit:hover {
+      background-position: -66px 0;
+    }
+    .quit {
+      background-position: -44px 0;
+      cursor: default;
+      position: absolute;
+      right: 0;
+      top: 45px;
+    }
+    a {
+      transition: none;
+    }
+    a.quit:hover {
+      text-decoration: underline;
+    }
+    .icon {
+      z-index: 100000;
+      width: 22px;
+      height: 22px;
+      background-image: image-url('new-sprites.png');
+      display: inline-block;
+    }
+  }
+}
