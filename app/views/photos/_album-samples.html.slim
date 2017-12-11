@@ -1,0 +1,17 @@
+.album-samples
+  .container
+    .bar-wrap
+      .bar
+        a.icon.quit
+  #canvas
+    .zoom-icon.zoom-icon-in
+    .magazine-viewport
+      .container
+        .magazine
+          div ignore="1" class="next-button"
+          div ignore="1" class="previous-button"
+          - images.each do |name|
+            = image_tag name, class: 'image'
+      .bottom
+        #slider-bar.turnjs-slider
+          #slider

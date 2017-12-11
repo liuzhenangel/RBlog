@@ -4,9 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 body {
-  font-size: 20px;
+  font-size: 18px;
   color: #212529;
-  font-family: 'Lora', 'Times New Roman', serif; }
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 p {
   line-height: 1.5;
@@ -86,7 +86,7 @@ body {
     text-transform: uppercase;
     color: #343a40; }
   #mainNav .navbar-nav > li.nav-item > a {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase; }

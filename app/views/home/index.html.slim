@@ -14,12 +14,12 @@ header.masthead
           = link_to article_path(article) do
             h2.post-title #{article.title}
             h3.post-subtitle #{article.subtitle}
-            p.post-meta
-              |Posted by
-              '
-              = link_to 'Rina', article_path(article)
-              '
-              |on #{format_date article.created_at}
+          p.post-meta
+            |Posted by
+            '
+            = link_to 'Rina', article_path(article)
+            '
+            |on #{format_date article.created_at}
         hr
       - unless @articles.blank?
         .clearfix

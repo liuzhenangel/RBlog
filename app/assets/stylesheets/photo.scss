@@ -12,7 +12,7 @@ body.photo-wrapper {
     margin-top: 200px;
   }
 
-  .container.album-wrap {
+  .album-wrap {
     .album-home:hover {
       z-index:2;
       cursor:none;
@@ -35,20 +35,22 @@ body.photo-wrapper {
     .quit {
       background-position: -44px 0;
       cursor: default;
-      position: absolute;
       right: 0;
-      top: 45px;
+      top: 55px;
+      float: right;
     }
     a {
       transition: none;
+      position: relative;
     }
     a.quit:hover {
       text-decoration: underline;
     }
     .icon {
-      z-index: 100000;
+      cursor:pointer;
       width: 22px;
       height: 22px;
+      z-index: 900000;
       background-image: image-url('new-sprites.png');
       display: inline-block;
     }

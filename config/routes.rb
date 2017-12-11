@@ -16,8 +16,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only:[:new, :create]
   resources :articles, only: [:index, :show]
-  resources :photos, only: [:index]
-
+  resources :photos, only: [:index, :show]
   namespace :admin do
     root 'dashboard#index', as: 'root'
 		post '/upload', to: 'photos#upload'

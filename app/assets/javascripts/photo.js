@@ -1,5 +1,5 @@
 //= require jquery
-//= require turbolinks
+//= require rails-ujs
 //= require cable
 //= require startbootstrap-clean-blog
 //= require turn-jquery.min
