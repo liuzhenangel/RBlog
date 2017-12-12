@@ -5,6 +5,7 @@ p = link_to '新建', new_admin_photo_path, class: 'btn btn-info'
 table.table
   thead
     tr
+      th ID
       th 相册名称
       th 相册描述
       th 创建时间
@@ -13,6 +14,7 @@ table.table
   tbody
     - @photos.each do |photo|
       tr
+        td = photo.id
         td = photo.title
         td = photo.subtitle
         td = format_date photo.created_at

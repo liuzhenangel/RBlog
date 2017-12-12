@@ -1,6 +1,6 @@
 class Admin::PhotosController < Admin::BaseController
   def index
-    @photos = Photo.all.page(params[:page])
+    @photos = Photo.all.order(updated_at: 'DESC').page(params[:page])
   end
 
   def new

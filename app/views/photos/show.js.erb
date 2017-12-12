@@ -1,4 +1,4 @@
-$('.album-samples').replaceWith("<%= j render(partial: 'album-samples', locals: { images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '1.jpg'] }) %>");
+$('.album-samples').replaceWith("<%= j render(partial: 'album-samples', locals: { images: @photo.images }) %>");
 
 function loadApp() {
   $('#canvas').fadeIn(1000);

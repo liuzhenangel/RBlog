@@ -1,33 +1,11 @@
 header.masthead
 .container.album-wrap
   .row
-    .col-lg-3.col-md-3.mx-auto.album-home
-      = link_to photo_path(id: 1), remote: true do
-        = image_tag '1.jpg', class: 'animated swing'
-    .col-lg-4.col-md-4.mx-auto.album-home
-      = link_to photo_path(id: 1), remote: true do
-        = image_tag '2.jpg', class: 'animated swing'
-    .col-lg-4.col-md-4.mx-auto.album-home
-      = image_tag '3.jpg', class: 'animated swing'
-  br
-  .row
-    .col-lg-4.col-md-2.mx-auto
-    .col-lg-4.col-md-2.mx-auto.album-home
-      = image_tag '4.jpg', class: 'animated swing'
-    .col-lg-4.col-md-2.mx-auto
-  br
-  .row
-    .col-lg-8.col-md-2.mx-auto.album-home
-      = image_tag '5.jpg', class: 'animated swing'
-    .col-lg-4.col-md-2.mx-auto.album-home
-      = image_tag '6.jpg', class: 'animated swing'
-    .col-lg-4.col-md-2.mx-auto.album-home
-      = image_tag '7.jpg', class: 'animated swing'
-  br
-  .row
-    .col-lg-6.col-md-2.mx-auto.album-home
-      = image_tag '1.jpg', class: 'animated swing'
-    .col-lg-6.col-md-2.mx-auto.album-home
-      = image_tag '2.jpg', class: 'animated swing'
+    - @photos.each do |photo|
+      - col = [*2..7].sample
+      - next unless photo.cover
+      div class="col-lg-#{col} col-md-#{col} mx-auto album-home"
+        = link_to photo_path(photo), remote: true do
+          = image_tag photo.cover, class: 'animated swing'
 
 .album-samples

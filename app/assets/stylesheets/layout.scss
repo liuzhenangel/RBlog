@@ -1,5 +1,17 @@
-header.masthead {
-  background-image: image-url("home-bg.jpg");
+header.home-index {
+  background-image: image-url("bg-1.jpeg");
+}
+header.articles-index {
+  background-image: image-url("bg-2.jpeg");
+}
+header.articles-show {
+  background-image: image-url("bg-3.jpeg");
+}
+header.home-about {
+  background-image: image-url("bg-5.jpeg");
+}
+header.home-timeline {
+  background-image: image-url("bg-6.jpeg");
 }
 .content-markdown {
   h1, h2, h3, h4 {
