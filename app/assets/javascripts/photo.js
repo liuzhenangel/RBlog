@@ -8,3 +8,5 @@
 //= require turn-modernizr.min
 //= require turn-hash
 //= require open-turn
+//= require turn-zoom.min
+//= require turn-magazine1

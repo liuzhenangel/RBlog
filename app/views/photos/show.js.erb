@@ -1,4 +1,10 @@
 $('.album-samples').replaceWith("<%= j render(partial: 'album-samples', locals: { images: @photo.images }) %>");
+if (Modernizr.csstransforms) {
+  $('head').append('<%= javascript_include_tag 'turn.min.js' %>')
+}else{
+  $('head').append('<%= javascript_include_tag 'turn.html4.min.js' %>')
+  $('head').append('<%= stylesheet_link_tag 'jquery.ui.html4.css' %>')
+}
 
 function loadApp() {
   $('#canvas').fadeIn(1000);
@@ -252,12 +258,6 @@ function loadApp() {
  });
 
 $('#canvas').hide();
-yepnope({
-  test : Modernizr.csstransforms,
-  yep: ['assets/turn.min.js'],
-  nope: ['assets/turn.html4.min.js', 'assets/jquery.ui.html4.css'],
-  both: ['assets/turn-zoom.min.js', 'assets/jquery.ui.css', 'assets/turn-magazine1.js', 'assets/turn-magazine.css'],
-});
 yepnope({
   complete: loadApp
 });
