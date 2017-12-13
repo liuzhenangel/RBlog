@@ -1,6 +1,6 @@
 module ApplicationHelper
   def format_date(datetime)
-    datetime.strftime("%Y-%m-%d %H:%M:%S") if datetime.present?
+    datetime.strftime("%Y-%m-%d") if datetime.present?
   end
 
   def active_for(controller_name, navbar_name)

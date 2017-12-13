@@ -6,3 +6,4 @@
 //= require startbootstrap-clean-blog
 //= require timeline-modernizr
 //= require timeline-main
+//= require googleanlytics

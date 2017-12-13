@@ -5,3 +5,4 @@ $(document).on 'ready page:load', ->
     $('.album-samples').hide()
     $('.container.album-wrap').show()
     $('header.masthead').show()
+    Hash.go('').update()

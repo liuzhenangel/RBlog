@@ -10,3 +10,4 @@
 //= require open-turn
 //= require turn-zoom.min
 //= require turn-magazine1
+//= require googleanlytics
