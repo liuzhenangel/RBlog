@@ -14,6 +14,10 @@ header.home-timeline {
   background-image: image-url("bg-6.jpeg");
 }
 .content-markdown {
+  word-wrap: break-word;
+  img {
+    width: 100%;
+  }
   h1, h2, h3, h4 {
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
