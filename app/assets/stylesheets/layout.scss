@@ -18,10 +18,20 @@ header.home-timeline {
   img {
     width: 100%;
   }
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+  }
   h1, h2, h3, h4 {
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eaecef;
   }
 }
 body.front_end {
