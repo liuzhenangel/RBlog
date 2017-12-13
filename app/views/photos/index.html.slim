@@ -2,7 +2,7 @@ header.masthead
 .container.album-wrap
   .row
     - @photos.each do |photo|
-      - col = [*2..7].sample
+      - col = [*3..5].sample
       - next unless photo.cover
       div class="col-lg-#{col} col-md-#{col} mx-auto album-home"
         = link_to photo_path(photo), remote: true do

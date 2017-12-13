@@ -1,3 +1,4 @@
+$(window).scrollTop(0)
 $('.album-samples').replaceWith("<%= j render(partial: 'album-samples', locals: { images: @photo.images }) %>");
 if (Modernizr.csstransforms) {
   $('head').append('<%= javascript_include_tag 'turn.min.js' %>')
@@ -18,9 +19,9 @@ function loadApp() {
   // Create the flipbook
   flipbook.turn({
       // Magazine width
-      width: 1000,
+      width: 800,
       // Magazine height
-      height: 600,
+      height: 400,
       // Duration in millisecond
       duration: 1000,
       // Enables gradients
