@@ -63,12 +63,14 @@ body.photo-wrapper {
   }
 
   @media (max-width: 768px) {
-    a {
-      pointer-events: none;
-      cursor: default;
-    }
-    .hover figure img {
-      width: 72%;
+    .album-wrap {
+      a {
+        pointer-events: none;
+        cursor: default;
+      }
+      .hover figure img {
+        width: 72%;
+      }
     }
   }
 }
