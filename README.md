@@ -62,6 +62,8 @@ $ mina deploy
 
 Rails文档: <http://edgeguides.rubyonrails.org/api_app.html>
 
+使用模板创建Rails项目: <https://github.com/80percent/rails-template>
+
 ubuntu16.04安装rails <https://gorails.com/setup/ubuntu/16.04>
 
 simditor编辑器: <http://simditor.tower.im/>
