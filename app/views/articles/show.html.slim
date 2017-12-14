@@ -1,7 +1,5 @@
-- random = [*1,2].sample
-header class="masthead articles-show-#{random}"
-  - if random == 2
-    .overlay
+header class="masthead articles-show-#{[*1,2].sample}"
+  .overlay
   .container
     .row
       .col-lg-8.col-md-10.mx-auto
