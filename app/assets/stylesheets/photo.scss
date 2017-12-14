@@ -28,7 +28,7 @@ body.photo-wrapper {
   .album-wrap {
     margin-top: 120px;
     img {
-      margin-left: 50%;
+      margin-left: 52%;
       margin-bottom: 120px;
       box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
     }
@@ -59,6 +59,16 @@ body.photo-wrapper {
       z-index: 900000;
       background-image: image-url('new-sprites.png');
       display: inline-block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    a {
+      pointer-events: none;
+      cursor: default;
+    }
+    .hover figure img {
+      width: 72%;
     }
   }
 }
@@ -100,3 +110,36 @@ body.photo-wrapper {
   animation-name: swing;
 }
 
+@media (max-width: 768px) {
+  @keyframes swing {
+    5% {
+      transform: rotate3d(0, 0, 1, 45deg);
+    }
+
+    20% {
+      transform: rotate3d(0, 0, 1, 60deg);
+    }
+
+    40% {
+      transform: rotate3d(0, 0, 1, 35deg);
+    }
+
+    60% {
+      transform: rotate3d(0, 0, 1, 50deg);
+    }
+
+    80% {
+      transform: rotate3d(0, 0, 1, 40deg);
+    }
+
+    to {
+      transform: rotate3d(0, 0, 1, 45deg);
+      margin-left: 50%;
+    }
+  }
+
+  .swing {
+    transform-origin: top left;
+    animation-name: swing;
+  }
+}
