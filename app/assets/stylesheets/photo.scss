@@ -28,7 +28,7 @@ body.photo-wrapper {
   .album-wrap {
     margin-top: 120px;
     img {
-      margin-left: 52%;
+      margin-left: 50%;
       margin-bottom: 120px;
       box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
     }
@@ -64,6 +64,12 @@ body.photo-wrapper {
 
   @media (max-width: 768px) {
     .album-wrap {
+      .hover.column {
+        text-align: center;
+      }
+      img {
+        margin-left: 0%;
+      }
       a {
         pointer-events: none;
         cursor: default;
@@ -114,34 +120,29 @@ body.photo-wrapper {
 
 @media (max-width: 768px) {
   @keyframes swing {
-    5% {
-      transform: rotate3d(0, 0, 1, 45deg);
-    }
-
     20% {
-      transform: rotate3d(0, 0, 1, 60deg);
+      transform: rotate3d(0, 0, 1, 15deg);
     }
 
     40% {
-      transform: rotate3d(0, 0, 1, 35deg);
+      transform: rotate3d(0, 0, 1, -10deg);
     }
 
     60% {
-      transform: rotate3d(0, 0, 1, 50deg);
+      transform: rotate3d(0, 0, 1, 5deg);
     }
 
     80% {
-      transform: rotate3d(0, 0, 1, 40deg);
+      transform: rotate3d(0, 0, 1, -5deg);
     }
 
     to {
-      transform: rotate3d(0, 0, 1, 45deg);
-      margin-left: 50%;
+      transform: rotate3d(0, 0, 1, 0deg);
     }
   }
 
   .swing {
-    transform-origin: top left;
+    transform-origin: top center;
     animation-name: swing;
   }
 }
