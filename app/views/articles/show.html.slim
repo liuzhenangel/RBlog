@@ -5,9 +5,17 @@ header class="masthead articles-show-#{random}"
   .container
     .row
       .col-lg-8.col-md-10.mx-auto
-        .site-heading
+        .post-heading
           h1 = @article.title
-          span.subheading = @article.subtitle
+          h2.subheading = @article.subtitle
+          span.meta
+            |Posted by
+            '
+            = link_to 'Rina', '#'
+            '
+            |on #{format_date @article.created_at}
+
+
 .container
   .row
     .col-lg-8.col-md-10.mx-auto
