@@ -229,6 +229,7 @@ header.masthead {
   font-size: 18px;
   font-style: italic;
   margin-top: 0;
+  font-family: Lora,'Times New Roman',serif;
   color: #868e96; }
   .post-preview > .post-meta > a {
     text-decoration: none;
