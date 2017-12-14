@@ -10,25 +10,27 @@ body.photo-wrapper {
   background-image: image-url("bg-4.jpeg");
   overflow: scroll;
 
-  header.masthead {
-    margin-top: 200px;
+  /* Zoom In #1 */
+  .hover figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    padding: 5%;
+    width: 70%;
+  }
+  .hover img:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    padding: 0;
   }
 
-  .album-home {
-    margin: 20px 0;
-  }
   .album-wrap {
-    .album-home:hover {
-      z-index:2;
-      cursor:none;
-      -webkit-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
-      -moz-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
-      -ms-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
-      -o-transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
-      transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
-    }
+    margin-top: 120px;
     img {
-      width: 100%;
+      margin-left: 50%;
+      margin-bottom: 120px;
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
     }
   }
 
@@ -68,29 +70,33 @@ body.photo-wrapper {
 }
 
 @keyframes swing {
+  5% {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+
   20% {
-    transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 60deg);
   }
 
   40% {
-    transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, 35deg);
   }
 
   60% {
-    transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 50deg);
   }
 
   80% {
-    transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, 40deg);
   }
 
   to {
-    transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 45deg);
   }
 }
 
 .swing {
-  transform-origin: top center;
+  transform-origin: top left;
   animation-name: swing;
 }
 
