@@ -9,8 +9,10 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 p {
-  line-height: 1.5;
-  margin: 30px 0; }
+  margin-top: 1em;
+  line-height: 180%;
+  letter-spacing:1px;
+  }
   p a {
     text-decoration: underline; }
 
@@ -200,6 +202,7 @@ header.masthead {
     margin: 10px 0 30px;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   header.masthead .post-heading .meta {
+    margin-bottom: 30px;
     font-size: 20px;
     font-weight: 300;
     font-style: italic;
@@ -211,7 +214,9 @@ header.masthead {
       font-size: 55px; }
     header.masthead .post-heading .subheading {
       font-size: 30px; } }
-
+:focus {
+  outline: none;
+}
 .post-preview > a {
   color: #212529; }
   .post-preview > a:focus, .post-preview > a:hover {
@@ -292,6 +297,27 @@ header.masthead {
 form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6; }
 
+.footer .modal-header {
+  display: block;
+  border-bottom: none;
+}
+.footer .modal-dialog .message {
+  margin: 10px auto 0 auto;
+  max-width: 580px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 20px;
+}
+footer .fa-alipay {
+  border-radius: 50%;
+  margin-bottom: 4px;
+  background-color: #222529;
+  width: 41px;
+}
+footer .fa-alipay:hover{
+  background-color: #0085A1;
+}
+
 footer {
   padding: 50px 0 65px; }
   footer .list-inline {
@@ -307,8 +333,7 @@ footer {
   font-weight: 800;
   padding: 15px 25px;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 0;
+  border-radius: .25rem;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .btn-primary {

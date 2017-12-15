@@ -5,6 +5,7 @@ p = link_to '新建', new_admin_article_path, class: 'btn btn-info'
 table.table
   thead
     tr
+      th ID
       th 标题
       th 副标题
       th 创建时间
@@ -13,6 +14,7 @@ table.table
   tbody
     - @articles.each do |article|
       tr
+        td = article.id
         td = article.title
         td = article.subtitle
         td = format_date article.created_at

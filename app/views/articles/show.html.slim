@@ -12,10 +12,30 @@ header class="masthead articles-show-#{[*1,2].sample}"
             = link_to 'Rina', '#'
             '
             |on #{format_date @article.created_at}
-
+          h3 = link_to '打赏支持', '#', 'data-toggle': "modal", 'data-target': "#PaysModal", class: 'btn btn-outline-white'
 
 .container
   .row
     .col-lg-8.col-md-10.mx-auto
       .content-markdown
         = @article.content.html_safe
+
+.footer.modal.fade#PaysModal tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  .modal-dialog.modal-lg role="document"
+    .modal-content
+      .modal-header
+        button type="button" class="close" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true"
+            | &times;
+        .message
+          i.fa.fa-quote-left.pull-left
+          span 如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！
+          i.fa.fa-quote-right.pull-right
+      .modal-body.clearfix
+        .row
+          .col-md-2.col-lg-2.mx-auto
+          .col-md-4.col-lg-4.mx-auto
+            = image_tag 'ali_pay.jpeg', width: '100%'
+          .col-md-4.col-lg-4.mx-auto
+            = image_tag 'wechat_pay.jpeg', width: '100%'
+          .col-md-2.col-lg-2.mx-auto

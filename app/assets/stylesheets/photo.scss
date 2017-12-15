@@ -1,5 +1,7 @@
 @import "bootstrap";
 @import "startbootstrap-clean-blog";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "turn-magazine";
 @import "jquery-ui";
 
@@ -89,27 +91,27 @@ body.photo-wrapper {
 
 @keyframes swing {
   5% {
-    transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 25deg);
   }
 
   20% {
-    transform: rotate3d(0, 0, 1, 60deg);
-  }
-
-  40% {
     transform: rotate3d(0, 0, 1, 35deg);
   }
 
+  40% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
   60% {
-    transform: rotate3d(0, 0, 1, 50deg);
+    transform: rotate3d(0, 0, 1, 30deg);
   }
 
   80% {
-    transform: rotate3d(0, 0, 1, 40deg);
+    transform: rotate3d(0, 0, 1, 20deg);
   }
 
   to {
-    transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 25deg);
   }
 }
 

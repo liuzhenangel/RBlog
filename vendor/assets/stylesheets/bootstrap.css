@@ -612,11 +612,17 @@ kbd kbd {
 }
 
 pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 90%;
-  color: #212529;
+  background-color: #f5f2f0;
+  padding: 1em;
+  margin: 2em 0.3em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  border-width: 0.2em;
+  border-color: #e0dfcc;
+  border-style: solid;
+  overflow: auto;
 }
 
 pre code {
@@ -2538,6 +2544,18 @@ fieldset[disabled] a.btn {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
+.btn-outline-white {
+  background-color: #dddddd85;
+  color: #fff;
+  border-color: #fff;
+}
+.btn-outline-white:hover, .btn-outline-white:focus {
+  color: #28a745;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
 .btn-outline-primary {
   color: #007bff;
   background-color: transparent;
