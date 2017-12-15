@@ -2550,11 +2550,11 @@ fieldset[disabled] a.btn {
   border-color: #fff;
 }
 .btn-outline-white:hover, .btn-outline-white:focus {
-  color: #28a745;
+  color: #fff;
   text-shadow: none;
-  background-color: #fff;
+  background-color: #ddddddc4;
   border-color: #fff;
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+  box-shadow: none;
 }
 .btn-outline-primary {
   color: #007bff;
