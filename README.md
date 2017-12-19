@@ -76,6 +76,8 @@ turnjs前端样式: <http://www.turnjs.com>
 
 timeline前端样式: <https://github.com/RyanFitzgerald/vertical-timeline>
 
+图片在线压缩: <http://compressjpeg.com/zh/>
+
 ## 引荐 Vue.js 项目
 
 项目 Demo 请访问: <http://v2ex.liuzhen.me/>
