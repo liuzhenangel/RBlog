@@ -13,3 +13,6 @@ UPYUN_BUCKET_HOST: ''
 
 # sidekiq namespace
 SIDEKIQ_NAMESPACE: ''
+
+USERNAME: 'xxx'
+PASSWORD: 'xxx'
