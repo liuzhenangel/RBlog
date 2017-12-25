@@ -7,6 +7,10 @@ class Photo < Base
     end
   end
 
+  def push
+    self.update(draft: !self.draft)
+  end
+
   def cover
     images = Nokogiri::HTML(self.content).xpath("//img")
     images[0]['src'] if images.present?

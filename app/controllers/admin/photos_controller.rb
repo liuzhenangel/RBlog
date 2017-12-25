@@ -35,7 +35,17 @@ class Admin::PhotosController < Admin::BaseController
     if @photo.destroy
       flash[:notice] = '删除成功'
     else
-      flash[:notice] = "删除失败, 原因: #{@photo.errors.messages.to_s}"
+      flash[:error] = "删除失败, 原因: #{@photo.errors.messages.to_s}"
+    end
+    redirect_to admin_photos_path
+  end
+
+  def push
+    @photo = Photo.find(params[:id])
+    if @photo.push
+      flash[:notice] = '更新成功'
+    else
+      flash[:error] = '更新失败'
     end
     redirect_to admin_photos_path
   end

@@ -25,7 +25,11 @@ Rails.application.routes.draw do
         get :push
       end
     end
-    resources :photos
+    resources :photos do
+      member do
+        get :push
+      end
+    end
     resource :resume, only: [:edit, :update]
   end
 end
