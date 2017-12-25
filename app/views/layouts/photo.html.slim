@@ -8,10 +8,8 @@ html
     meta http-equiv="cleartype" content="on"
     meta name="HandheldFriendly" content="True"
     meta name="MobileOptimized" content="320"
-    - if content_for?(:title)
-      = yield(:title)
-    - else
-      title RBlog
+    title
+      = content_for?(:title) ? "#{yield(:title)} | Rina's Blog" : "Rina's Blog"
     = csrf_meta_tags
     = action_cable_meta_tag
     = content_for?(:head) ? yield(:head) : ''
