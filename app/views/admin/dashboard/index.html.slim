@@ -38,7 +38,7 @@
         .card-body
           .card-body-icon
             i.fa.fa-fw.fa-file-text-o
-          .mr-5 1 Resume!
+          .mr-5 #{Resume.first.visit} Resume Visited!
         = link_to edit_admin_resume_path, class: 'card-footer text-white clearfix small z-1' do
           span.float-left View Details
           span.float-right

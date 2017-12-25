@@ -6,5 +6,6 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
+    @photo.increment!(:visit, 1)
   end
 end

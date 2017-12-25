@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def about
     @resume = Resume.first
+    @resume.increment!(:visit, 1)
   end
 
   def timeline
