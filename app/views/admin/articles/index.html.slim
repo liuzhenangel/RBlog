@@ -7,22 +7,28 @@ table.table
     tr
       th ID
       th 标题
-      th 副标题
+      th 访问数
       th 创建时间
       th 更新时间
+      th 发布
       th 操作
   tbody
     - @articles.each do |article|
       tr
         td = article.id
         td = article.title
-        td = article.subtitle
+        td = article.visit
         td = format_date article.created_at
         td = format_date article.updated_at
         td
-          = link_to '更新', edit_admin_article_path(article), class: 'btn btn-info btn-sm'
-          '
           = link_to '浏览', article_path(article), class: 'btn btn-info btn-sm', target: '_blank'
+          '
+          - if article.draft
+            = link_to "发布", push_admin_article_path(article), class: 'btn btn-warning btn-sm'
+          - else
+            = link_to "下架", push_admin_article_path(article), class: 'btn btn-danger btn-sm'
+        td
+          = link_to '更新', edit_admin_article_path(article), class: 'btn btn-info btn-sm'
           '
           = link_to '删除', admin_article_path(article), method: 'DELETE', data: { confirm: "确定删除#{article.title}这篇文章?" }, class: 'btn btn-danger btn-sm'
 

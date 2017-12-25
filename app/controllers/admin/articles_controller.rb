@@ -35,9 +35,20 @@ class Admin::ArticlesController < Admin::BaseController
     if @article.destroy
       flash[:notice] = '删除成功'
     else
-      flash[:notice] = "删除失败, 原因: #{@article.errors.messages.to_s}"
+      flash[:error] = "删除失败"
     end
   end
+
+  def push
+    @article = Article.find(params[:id])
+    if @article.push
+      flash[:notice] = '发布成功'
+    else
+      flash[:error] = '发布失败'
+    end
+    redirect_to admin_articles_path
+  end
+
   private
   def article_params
     params.require(:article).permit(:title, :subtitle, :content)

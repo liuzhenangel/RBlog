@@ -1,4 +1,5 @@
 class Photo < Base
+  scope :pushed, -> { where(draft: false) }
 
   def images
     Nokogiri::HTML(self.content).xpath("//img").map do |img|
