@@ -1,4 +1,4 @@
-set :domain, 'www.xiguamingpian.com'
+set :domain, 'blog.xiguamingpian.com'
 set :deploy_to, '/data/www/RBlog'
 set :repository,  'https://github.com/liuzhenangel/RBlog.git'
 set :branch, 'master'
