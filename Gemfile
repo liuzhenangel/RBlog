@@ -39,7 +39,7 @@ gem 'status-page'
 gem 'browser_warrior'
 gem 'redis-namespace'
 gem 'sidekiq'
-gem 'kaminari', '~> 1.0.1'
+gem 'kaminari', '~> 1.2.1'
 gem 'rails-i18n', '~> 5.0.3'
 gem 'mina', '~> 1.2.2', require: false
 gem 'mina-puma', '~> 1.1.0', require: false
