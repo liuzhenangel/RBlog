@@ -162,7 +162,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
-    puma (3.11.4)
+    puma (3.12.6)
     rack (2.0.5)
     rack-protection (2.0.3)
       rack
@@ -320,7 +320,7 @@ DEPENDENCIES
   mina-sidekiq (~> 1.0.3)
   pg
   pry
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.1.4)
   rails-i18n (~> 5.0.3)
   rails_apps_testing
