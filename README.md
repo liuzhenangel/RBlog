@@ -6,7 +6,7 @@
 
 ## Demo
 
-项目 Demo 请访问: <http://liuzhen.me/>
+项目 Demo 请访问: <http://blog.xiguamingpian.com/>
 
 ## 核心技术框架
 
@@ -80,13 +80,13 @@ timeline前端样式: <https://github.com/RyanFitzgerald/vertical-timeline>
 
 ## 引荐 Vue.js 项目
 
-项目 Demo 请访问: <http://v2ex.liuzhen.me/>
+项目 Demo 请访问: <http://v2ex.xiguamingpian.com/>
 
 项目代码: <https://github.com/liuzhenangel/v2ex_frontend>
 
 ## 引荐 React.js 项目
 
-项目 Demo 请访问: <http://ruby-china.liuzhen.me/>
+项目 Demo 请访问: <http://ruby-china.xiguamingpian.com/>
 
 项目代码: <https://github.com/liuzhenangel/react-ruby-china>
 
