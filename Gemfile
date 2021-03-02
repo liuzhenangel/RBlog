@@ -29,7 +29,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
 gem 'figaro'
 gem 'jquery-rails'
-gem 'simple_form', '~> 3.5.0'
+gem 'simple_form', '~> 5.0.0'
 gem 'font-awesome-sass'
 gem 'slim-rails'
 gem 'high_voltage', '~> 3.0.0'
